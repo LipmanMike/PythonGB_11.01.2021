@@ -7,3 +7,16 @@
 # Пользователь ввел число 1. Результат: 7, 5, 3, 3, 2, 1.
 # Набор натуральных чисел можно задать непосредственно в коде, например, my_list = [7, 5, 3, 3, 2].
 
+my_list = [8, 6, 4, 3, 2, 2]
+set_1 = set(my_list)
+set_2 = []
+for user_number in range(len(my_list)):
+    input('Введите число: ')
+    set_2.append(user_number)
+print(set_2)
+set_2 = set(set_2)
+print(set_1 | set_2)
+
+
+# Цикл for
+# метод insert

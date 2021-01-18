@@ -4,7 +4,7 @@
 
 user_message = input('Введите сообщение: ')
 user_message = user_message.split()
-for i in enumerate(user_message):
-    print(i[:10])
-    # не работает ограничение в 10 символов
+for number, message in enumerate(user_message):
+    print(number, message[:10])
+
 
