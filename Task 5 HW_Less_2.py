@@ -8,15 +8,17 @@
 # Набор натуральных чисел можно задать непосредственно в коде, например, my_list = [7, 5, 3, 3, 2].
 
 my_list = [8, 6, 4, 3, 2, 2]
-set_1 = set(my_list)
-set_2 = []
-for user_number in range(len(my_list)):
-    input('Введите число: ')
-    set_2.append(user_number)
-print(set_2)
-set_2 = set(set_2)
-print(set_1 | set_2)
+try:
+    user_number = int(input('Введите целое число: '))
+    for index, number in enumerate(my_list):
+        if user_number < number:
+            continue
+        my_list.insert(index, number)
+        break
+    else:
+        my_list.append(user_number)
+except ValueError:
+    print('нужно было ввести целое число')
+print(my_list)
 
 
-# Цикл for
-# метод insert
